@@ -17,6 +17,18 @@ class ProductDB
 {
     static void SaveProducts(List<Product> products)
     {
-        StreamWriter
+        StreamWriter textOut = new StreamWriter(new FileStream("productos.txt", FileMode.Create, 
+                                                                                FileAccess.Write));
+
+        foreach(var p in products)
+        {
+            textOut.WriteLine($"{p.code}|{p.description}|{p.price}");
+        }
+        textOut.Close();
     }
+}
+
+class Program 
+{
+    
 }
