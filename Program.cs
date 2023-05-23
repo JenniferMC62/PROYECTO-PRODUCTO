@@ -26,6 +26,12 @@ class ProductDB
         }
         textOut.Close();
     }
+
+    public static SaveProductsBin(List<Product>products)
+    {
+        FileStream fs = new FileStream("archivobin", FileMode.Create, FileAccess.Write);
+        BinaryWriter 
+    }
 }
 
 class Program 
